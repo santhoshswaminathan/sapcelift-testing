@@ -21,9 +21,9 @@
 remote_state {
   backend = "s3"
   config = {
-    bucket         = "your-remote-state-bucket"
+    bucket         = "spacelift-dev-testing"
     key            = "${path_relative_to_include()}/terraform.tfstate"
-    region         = "us-west-2"
+    region         = "us-east-1"
     encrypt        = true
   }
 }
