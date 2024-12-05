@@ -1,0 +1,5 @@
+stacks:
+  - name: spacelift testing
+    working_directory: live/dev
+    backend_type: terragrunt
+    autodeploy: true
