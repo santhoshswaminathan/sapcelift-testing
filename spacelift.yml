@@ -1,23 +1,8 @@
-version: 1
- 
-# Default settings for all stacks in the workspace
-stack_defaults:
-  terraform:
-    # Default command settings for Terraform
-    commands:
-      init:
-        # Steps to initialize Terraform
-        steps:
-          - name: Init Terraform
-            run: terragrunt init
-      plan:
-        # Steps to create a plan
-        steps:
-          - name: Plan
-            run: terragrunt plan
-
 stacks:
-  - name: spacelift testing
-    working_directory: live/dev
+  - name: dev-s3-bucket
+    working_directory: live/dev/s3-bucket
     backend_type: terragrunt
     autodeploy: true
+    triggers:
+      - live/dev/s3-bucket/terragrunt.hcl
+      - modules/s3/**/* 
