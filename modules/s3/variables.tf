@@ -13,8 +13,3 @@ variable "force_destroy" {
   type        = bool
   default     = false
 }
-
-variable "environment" {
-  description = "Environment (e.g., dev, staging, prod)"
-  type        = string
-}

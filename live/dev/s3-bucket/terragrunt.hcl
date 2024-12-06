@@ -6,5 +6,4 @@ inputs = {
   bucket_name   = "spacelift-dev-bucket"
   region        = "us-east-1"
   force_destroy = true
-  environment   = "dev"
 }

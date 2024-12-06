@@ -12,7 +12,6 @@ resource "aws_s3_bucket" "example" {
   force_destroy = var.force_destroy
 
   tags = {
-    Environment = var.environment
     ManagedBy   = "Spacelift"
   }
 }
